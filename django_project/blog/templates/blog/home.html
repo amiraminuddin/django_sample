@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% block content %}
+        <!--this is for for-loop statement -->
+        {% for post in posts %}
+        <!--to access variable-->
+            <h1>{{ post.title }}</h1>
+            <p>By {{ post.author }} on {{ post.date_posted }}</p>
+            <p>{{ post.content }}</p>
+        {% endfor %}
+{% endblock content %}
