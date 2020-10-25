@@ -10,7 +10,7 @@ posts = [
         'date_posted':'October 23, 2020'
     },
     {
-        'author':'pekeh',
+        'author':'amir',
         'title':'Blog post 2',
         'content':'second post content',
         'date_posted':'October 24, 2020'
