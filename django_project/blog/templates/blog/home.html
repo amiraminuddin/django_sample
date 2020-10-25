@@ -1,4 +1,9 @@
+<!--
+    will get extend from the template base.html
+-->
 {% extends "blog/base.html" %}
+
+<!-- overwrite content section in base.html -->
 {% block content %}
         <!--this is for for-loop statement -->
         {% for post in posts %}
