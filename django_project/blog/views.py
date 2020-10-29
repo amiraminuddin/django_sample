@@ -25,6 +25,8 @@ def home(request):
     #dictionary for data posts
     context = {
         'title': 'welcome',
+        #post from model file
+        #key must be same in dummy database
         'posts': Post.objects.all()
     }
 
