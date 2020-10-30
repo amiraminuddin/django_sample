@@ -1,5 +1,6 @@
 <!--will get extend from the template blog/base.html-->
 {% extends "blog/base.html" %}
+<!--load cripsy css in term of form-->
 {% load crispy_forms_tags %}
 <!-- overwrite content section in blog/base.html -->
 {% block content %}
@@ -8,6 +9,7 @@
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join Today</legend>
+                <!--specify style that want to be use-->
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
