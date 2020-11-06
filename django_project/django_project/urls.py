@@ -18,6 +18,8 @@ from django.contrib.auth import views as auth_view
 from django.urls import path, include
 #import multiple view
 from users import views as user_view
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,3 +31,6 @@ urlpatterns = [
     path('', include('blog.urls')),
     
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
