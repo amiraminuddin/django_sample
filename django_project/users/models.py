@@ -10,8 +10,9 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    def save(self):
-        super().save()
+    #need to accept the same arguments as the original method
+    def save(self, *args, **kwargs):
+        super(Profile, self).save(*args, **kwargs)
 
         #resize the image
         img = Image.open(self.image.path)

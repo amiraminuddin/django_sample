@@ -1,0 +1,20 @@
+<!--will get extend from the template blog/base.html-->
+{% extends "blog/base.html" %}
+<!--load cripsy css in term of form-->
+{% load crispy_forms_tags %}
+<!-- overwrite content section in blog/base.html -->
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Blog Post</legend>
+                <!--specify style that want to be use-->
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
