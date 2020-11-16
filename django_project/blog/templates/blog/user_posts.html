@@ -6,6 +6,7 @@
 
 <!-- overwrite content section in base.html -->
 {% block content %}
+        <h1 class="mb-3">Post by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
         <!--this is for for-loop statement -->
         {% for post in posts %}
         <!--to access variable-->
